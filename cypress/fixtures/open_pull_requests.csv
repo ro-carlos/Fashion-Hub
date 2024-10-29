@@ -1,0 +1,26 @@
+Title,Date,Author
+Fix XDebug Extension not being removed,2024-10-29T08:20:51Z,PineappleIOnic
+Fix validator usage for updating string size,2024-10-29T06:05:04Z,abnegate
+feat: insights,2024-10-27T10:48:58Z,TorstenDittmann
+Create README-ES.md (Spanish/Español),2024-10-27T10:42:47Z,DH-555
+fix refreshToken missing in google oauth,2024-10-26T11:44:15Z,Shaik-Sirajuddin
+Feat sites,2024-10-25T16:48:40Z,vermakhushboo
+make view api use file cache,2024-10-25T15:39:11Z,shimonewman
+fix: missed function cpu bump,2024-10-25T11:28:40Z,loks0n
+Update CONTRIBUTING.md,2024-10-24T16:27:36Z,raman04-byte
+fix: createuser... endpoints return a vague server error when null name is provided,2024-10-24T09:49:16Z,Shaik-Sirajuddin
+📚 Documentation: Deprecation of ${workspaceRoot} in VSCode debug config for XDebug setup. #8814,2024-10-22T12:22:39Z,Kraftsman1
+feat: move certificate generation to Adapter,2024-10-22T11:57:40Z,basert
+Memcached for /view endpoint,2024-10-20T12:31:30Z,ItzNotABug
+feat: custom registrar,2024-10-18T19:45:26Z,TorstenDittmann
+feat: add health-check that monitores pending certificates queue,2024-10-18T10:58:12Z,basert
+fix: test flakiness,2024-10-15T18:40:38Z,loks0n
+Rewrite function variables endpoints with http syntax,2024-10-14T15:49:20Z,vermakhushboo
+update docker image to use the latest image tag,2024-10-14T10:20:31Z,egyleader
+Feat migration,2024-10-14T01:29:38Z,abnegate
+Reduce builds usage storage,2024-10-10T19:40:35Z,shimonewman
+example: compose files,2024-10-09T10:20:00Z,TorstenDittmann
+Adds state parameter to OAuth2 flow,2024-10-09T00:49:17Z,gepd
+Replace expectException with try/catch,2024-10-03T10:22:11Z,vermakhushboo
+Feat docker geo,2024-10-02T09:26:28Z,lohanidamodar
+chore: update SDKs,2024-10-01T17:10:41Z,christyjacob4
