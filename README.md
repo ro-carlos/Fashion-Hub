@@ -16,17 +16,17 @@
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/ro-carlos/fashion-hub/total) ![Contributors](https://img.shields.io/github/contributors/ro-carlos/fashion-hub?color=dark-green) ![Issues](https://img.shields.io/github/issues/ro-carlos/fashion-hub) ![License](https://img.shields.io/github/license/ro-carlos/fashion-hub) 
+![Downloads](https://img.shields.io/github/downloads/ro-carlos/fashion-hub/total) ![Contributors](https://img.shields.io/github/contributors/ro-carlos/fashion-hub?color=dark-green) ![Issues](https://img.shields.io/github/issues/ro-carlos/fashion-hub) ![License](https://img.shields.io/github/license/ro-carlos/fashion-hub)
 
 ## Table Of Contents
 
-* [About the Project](#about-the-project)
-* [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Authors](#authors)
+- [About the Project](#about-the-project)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Authors](#authors)
 
 ## About The Project
 
@@ -46,12 +46,12 @@ You just need the Cypress, Node and NPM on your local machine.
 
 Install Node.
 
-* node
+- node
 
 _Check Node, please refer to the [Node Versions](https://nodejs.org/en/download)_
 
-
 ### Installation
+
 1. Clone the repo
 
 ```sh
@@ -65,52 +65,67 @@ npm install
 ```
 
 ### Start local environment
+
 1. Download docker image: [Docker Image](https://hub.docker.com/r/pocketaces2/fashionhub-demo-app)
 
 2. Start docker image
+
 ```sh
 docker run -p 4000:4000 pocketaces2/fashionhub-demo-app:latest
 ```
 
 ## Usage
-1. Run all features headless mode.
+
+1. Open cypress terminal.
+
 ```sh
-npx cypress run --browser chrome --headless --env envFile=local
+npx cypress run --env
 ```
 
-2. Run all features headed mode.
+2. Run all features headless mode.
+
+```sh
+npx cypress run --browser chrome --headless
+```
+
+3. Run all features headed mode in local environment.
+
 ```sh
 npx cypress run --browser chrome --headed --env envFile=local
 ```
 
-3. Run all features with @Smoke Annotation headless mode.
+4. Run all features with @Smoke Annotation headless mode.
+
 ```sh
 npx cypress run --browser chrome --headless --env envFile=local,tags=@Smoke
 ```
 
-4. Run all features with @Regression Annotation headless mode.
+5. Run all features with @Regression Annotation headless mode.
+
 ```sh
 npx cypress run --browser chrome --headless --env envFile=local,tags=@Regression
 ```
 
-5. Run single feature.
+6. Run single feature.
+
 ```sh
 npx cypress run --spec cypress/integration/login.feature --headless --browser chrome --env envFile=local,tags=@Regression
 ```
 
-6. Generate cypress report after execution.
+7. Generate cypress report after execution.
+
 ```sh
 node cypress/generate-report.js
 ```
 
-7. Run smoke tests and cypress report after execution.
+8. Run smoke tests and generate cucumber report after execution.
+
 ```sh
-npm run test:smoke:local.mac 
+npm run test:smoke:local.mac
 ```
 
 Check package.json to view more useful commands.
 
 ## Authors
 
-* **Carlos Rodríguez** - *Software Engineer* - [Carlos Rodríguez](https://github.com/ro-carlos/) - *Challenge*
-
+- **Carlos Rodríguez** - _Software Engineer_ - [Carlos Rodríguez](https://github.com/ro-carlos/) - _Challenge_
