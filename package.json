@@ -36,7 +36,7 @@
   "author": "Carlos Rodríguez",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.17.4",
+    "cypress": "^13.7.1",
     "mocha": "^10.1.0",
     "multiple-cucumber-html-reporter": "^3.0.1"
   },

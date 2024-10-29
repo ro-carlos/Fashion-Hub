@@ -146,3 +146,6 @@ downloads/
 
 # view
 view
+
+# messages
+cucumber-messages.ndjson

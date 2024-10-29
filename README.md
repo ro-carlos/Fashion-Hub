@@ -36,7 +36,7 @@ This is an automation framework to run test cases using cypress with javascript.
 
 ## Built With
 
-Cypress 12.17.4, Node 22.7.0, NPM 10.8.2
+Cypress 13.7.1, Node 22.7.0, NPM 10.8.2
 
 ## Getting Started
 
@@ -79,46 +79,52 @@ docker run -p 4000:4000 pocketaces2/fashionhub-demo-app:latest
 1. Open cypress terminal.
 
 ```sh
-npx cypress run --env
+npx cypress open
 ```
 
-2. Run all features headless mode.
+2. Run all features in firefox.
+
+```sh
+npx cypress run --browser firefox
+```
+
+3. Run all features headless mode.
 
 ```sh
 npx cypress run --browser chrome --headless
 ```
 
-3. Run all features headed mode in local environment.
+4. Run all features headed mode in local environment.
 
 ```sh
 npx cypress run --browser chrome --headed --env envFile=local
 ```
 
-4. Run all features with @Smoke Annotation headless mode.
+5. Run all features with @Smoke Annotation headless mode.
 
 ```sh
 npx cypress run --browser chrome --headless --env envFile=local,tags=@Smoke
 ```
 
-5. Run all features with @Regression Annotation headless mode.
+6. Run all features with @Regression Annotation headless mode.
 
 ```sh
 npx cypress run --browser chrome --headless --env envFile=local,tags=@Regression
 ```
 
-6. Run single feature.
+7. Run single feature with tag.
 
 ```sh
 npx cypress run --spec cypress/integration/login.feature --headless --browser chrome --env envFile=local,tags=@Regression
 ```
 
-7. Generate cypress report after execution.
+8. Generate cypress report after execution.
 
 ```sh
 node cypress/generate-report.js
 ```
 
-8. Run smoke tests and generate cucumber report after execution.
+9. Run smoke tests and generate cucumber report after execution.
 
 ```sh
 npm run test:smoke:local.mac
