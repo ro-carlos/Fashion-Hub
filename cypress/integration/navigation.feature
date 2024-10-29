@@ -1,5 +1,6 @@
 Feature: Navigation Functionality
 
+  @Regression
   Scenario: Validate status codes for each link on the page
     Given I am on the home page
     When I fetch all links on the page

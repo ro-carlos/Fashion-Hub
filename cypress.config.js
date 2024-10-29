@@ -1,17 +1,16 @@
 const { defineConfig } = require("cypress");
 const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
 const browserify = require("@badeball/cypress-cucumber-preprocessor/browserify");
-const fs = require("fs"); // Importa fs para leer archivos
+const fs = require("fs");
 
 async function setupNodeEvents(on, config) {
   await preprocessor.addCucumberPreprocessorPlugin(on, config);
   on("file:preprocessor", browserify.default(config));
 
-  // Lee el archivo de configuración según el ambiente
-  const environment = config.env.envName || "local";
+  // Load environment-specific configurations
+  const environment = config.env.envFile || "local";
   const configFilePath = `cypress/config-files/${environment}.json`;
 
-  // Verifica si el archivo existe y lo carga
   if (fs.existsSync(configFilePath)) {
     const envConfig = JSON.parse(fs.readFileSync(configFilePath, "utf-8"));
     config.env = { ...config.env, ...envConfig };
@@ -40,8 +39,8 @@ module.exports = defineConfig({
     "*.hotjar.com",
     "*.googletagmanager.com",
     "*.adroll.com",
-    "*.pnterest.com",
-    "*.braze.com ",
+    "*.pinterest.com",
+    "*.braze.com",
     "*.smile.io",
     "*.sinter-collect.com",
     "*.bing.com",
@@ -50,8 +49,8 @@ module.exports = defineConfig({
     "discountoncart.com",
     "my.jst.ai",
   ],
+
   e2e: {
-    chromeWebSecurity: false,
     setupNodeEvents,
     specPattern: "cypress/integration/*.feature",
   },

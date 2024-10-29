@@ -1,5 +1,6 @@
 Feature: GitHub Pull Requests Export Functionality
 
+  @Smoke
   Scenario: Export open pull requests to CSV
     Given I navigate to the GitHub pull requests page
     When I collect all open pull requests data
