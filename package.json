@@ -1,0 +1,29 @@
+{
+  "name": "fashion-hub-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/integration/stepDefinitions/**",
+    "json": {
+      "enabled": true,
+      "formatter": "cypress/cucumber-json-formatter",
+      "output": "cypress/cucumberReports/results.json"
+    }
+  },
+  "author": "Carlos Rodríguez",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.17.4",
+    "mocha": "^10.1.0",
+    "multiple-cucumber-html-reporter": "^3.0.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
+    "@cypress/browserify-preprocessor": "latest"
+  }
+}

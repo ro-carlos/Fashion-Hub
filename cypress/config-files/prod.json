@@ -1,0 +1,7 @@
+{
+  "baseUrl": " https://pocketaces2.github.io/fashionhub/",
+  "githubPRsUrl": "https://github.com/appwrite/appwrite/pulls/",
+  "env": {
+    "APP_BASE_URL": "https://pocketaces2.github.io/fashionhub/"
+  }
+}

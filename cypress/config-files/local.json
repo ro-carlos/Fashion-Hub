@@ -1,0 +1,7 @@
+{
+  "baseUrl": "http://localhost:4000/fashionhub/",
+  "githubPRsUrl": "https://github.com/appwrite/appwrite/pulls/",
+  "env": {
+    "APP_BASE_URL": "http://localhost:4000/fashionhub/"
+  }
+}

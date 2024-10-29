@@ -1,0 +1,7 @@
+{
+  "baseUrl": "https://staging-env/fashionhub/",
+  "githubPRsUrl": "https://github.com/appwrite/appwrite/pulls/",
+  "env": {
+    "APP_BASE_URL": "https://staging-env/fashionhub/"
+  }
+}
