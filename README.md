@@ -25,6 +25,7 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+  - [Start Local Environment](#start-local-environment)
 - [Usage](#usage)
 - [Authors](#authors)
 

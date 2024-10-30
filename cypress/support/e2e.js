@@ -20,11 +20,10 @@ import "./commands";
 // require('./commands')
 
 before(() => {
+  const envFilePath = "./cypress/config-files/envData.json";
   const envData = {
     environment: Cypress.env("envFile") || "local",
     browser: Cypress.browser.name,
-    startTime: new Date().toISOString(),
   };
-
-  cy.writeFile("cypress/config-files/envData.json", envData);
+  cy.writeFile(envFilePath, JSON.stringify(envData, null, 2));
 });
