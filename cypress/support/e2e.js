@@ -14,7 +14,17 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+before(() => {
+  const envData = {
+    environment: Cypress.env("envFile") || "local",
+    browser: Cypress.browser.name,
+    startTime: new Date().toISOString(),
+  };
+
+  cy.writeFile("cypress/config-files/envData.json", envData);
+});

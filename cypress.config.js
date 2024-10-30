@@ -28,7 +28,7 @@ module.exports = defineConfig({
   pageLoadTimeout: 10000,
   defaultCommandTimeout: 10000,
   requestTimeout: 10000,
-  //chromeWebSecurity: false,
+  chromeWebSecurity: false,
   projectId: "ToBeDefined",
   video: false,
 
