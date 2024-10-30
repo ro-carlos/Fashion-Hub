@@ -7,6 +7,8 @@
     "test": "npx cypress run",
     "test:runall:local": "npm run cucumber:reportcleanup && cypress run --browser chrome --headless --env envFile=local; npm run cucumber:generatereport && npm run cucumber:openreport",
     "test:runall:local.mac": "npm run cucumber:reportcleanup.mac && cypress run --browser chrome --headless --env envFile=local; npm run cucumber:generatereport && npm run cucumber:openreport",
+    "test:runall:local.firefox": "npm run cucumber:reportcleanup && cypress run --browser firefox --headless --env envFile=local; npm run cucumber:generatereport && npm run cucumber:openreport",
+    "test:runall:local.firefox.mac": "npm run cucumber:reportcleanup.mac && cypress run --browser firefox --headless --env envFile=local; npm run cucumber:generatereport && npm run cucumber:openreport",
     "test:smoke:local": "npm run cucumber:reportcleanup && cypress run --browser chrome --headless --env envFile=local,tags=@Smoke; npm run cucumber:generatereport && npm run cucumber:openreport",
     "test:smoke:local.mac": "npm run cucumber:reportcleanup.mac && cypress run --browser chrome --headless --env envFile=local,tags=@Smoke; npm run cucumber:generatereport && npm run cucumber:openreport",
     "test:smoke:staging": "npm run cucumber:reportcleanup && cypress run --browser chrome --headless --env envFile=staging,tags=@Smoke; npm run cucumber:generatereport && npm run cucumber:openreport",

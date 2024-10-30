@@ -2,6 +2,7 @@ const { defineConfig } = require("cypress");
 const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
 const browserify = require("@badeball/cypress-cucumber-preprocessor/browserify");
 const fs = require("fs");
+const path = require("path");
 
 async function setupNodeEvents(on, config) {
   await preprocessor.addCucumberPreprocessorPlugin(on, config);
@@ -10,6 +11,7 @@ async function setupNodeEvents(on, config) {
   // Load environment-specific configurations
   const environment = config.env.envFile || "local";
   const configFilePath = `cypress/config-files/${environment}.json`;
+  const envFilePath = `cypress/config-files/envData.json`;
 
   if (fs.existsSync(configFilePath)) {
     const envConfig = JSON.parse(fs.readFileSync(configFilePath, "utf-8"));
@@ -18,6 +20,13 @@ async function setupNodeEvents(on, config) {
     throw new Error(`Configuration file not found: ${configFilePath}`);
   }
 
+  on("before:browser:launch", (browser = {}, launchOptions) => {
+    const envData = {
+      environment: config.env.envFile || "default env",
+      browser: browser.name || "default browser",
+    };
+    fs.writeFileSync(envFilePath, JSON.stringify(envData, null, 2));
+  });
   return config;
 }
 
@@ -28,7 +37,7 @@ module.exports = defineConfig({
   pageLoadTimeout: 10000,
   defaultCommandTimeout: 10000,
   requestTimeout: 10000,
-  chromeWebSecurity: false,
+  //chromeWebSecurity: false,
   projectId: "ToBeDefined",
   video: false,
 

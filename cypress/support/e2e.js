@@ -18,12 +18,3 @@ import "./commands";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-
-before(() => {
-  const envFilePath = "./cypress/config-files/envData.json";
-  const envData = {
-    environment: Cypress.env("envFile") || "local",
-    browser: Cypress.browser.name,
-  };
-  cy.writeFile(envFilePath, JSON.stringify(envData, null, 2));
-});
